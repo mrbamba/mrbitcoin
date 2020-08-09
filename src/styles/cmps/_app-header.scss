@@ -1,0 +1,13 @@
+.app-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .nav{
+        display: flex;
+        justify-items: space-evenly;
+        align-items: center;
+        a{
+            margin:15px;
+        };
+    }
+}

@@ -1,0 +1,3 @@
+<h2>Contacts</h2>
+<contact-filter (filter)="loadContacts($event)"></contact-filter>
+<contact-list *ngIf="contacts" [contacts]="contacts.source.value"></contact-list>
