@@ -1,1 +1,37 @@
-<p>contact-edit-page works!</p>
+<section class="contact-edit">
+    <h2>Contact Edit</h2>
+    <img ngxGravatar [email]="contactToEdit.email" size="150" borderColor="#9E9E9E" borderWidth="2">
+    <form #contactForm="ngForm" (submit)="saveContact($event)">
+
+        <div>
+            <label for="name">Name </label>
+            <input required min-length="3" type="text" id="name" #name="ngModel" name="name" placeholder="name"
+                [(ngModel)]="contactToEdit.name">
+
+            <h6 *ngIf="!name.value && name.touched" class="danger">Name is required</h6>
+
+        </div>
+        <div>
+            <label for="email">Email </label>
+            <input type="text" id="email" placeholder="email" #email="ngModel" name="email"
+                [(ngModel)]="contactToEdit.email">
+
+            <h6 *ngIf="!email.value && email.touched" class="danger">Email is required</h6>
+
+        </div>
+        <div>
+            <label for="phone">Phone </label>
+            <input type="text" id="phone" placeholder="phone" #phone="ngModel" name="phone"
+                [(ngModel)]="contactToEdit.phone">
+
+            <h6 *ngIf="!phone.value && phone.touched" class="danger">Phone is required</h6>
+
+        </div>
+        <div class="actions">
+            <button class="delete-button" (click)="deleteContact($event)">Delete</button>
+            <button class="save-button" [disabled]="!contactForm.valid" (click)="saveContact($event)">Save</button>
+            <button class="general-button" (click)="navigateBack($event)">Back</button>
+        </div>
+    </form>
+    <pre>{{contactToEdit | json}}</pre>
+</section>

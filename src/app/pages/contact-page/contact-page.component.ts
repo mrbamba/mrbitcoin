@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ContactService } from '../../services/contact.service';
+import { Contact } from '../../contact';
 
 
 @Component({
@@ -10,12 +11,24 @@ import { ContactService } from '../../services/contact.service';
 export class ContactPageComponent implements OnInit {
 
   constructor(private contactService:ContactService) { }
-  contacts=this.contactService.contacts$
-  ngOnInit(): void {
-    this.loadContacts(null)
-  }
+
+
+  contacts:Contact[]=[]
+
+
   loadContacts(filterBy){
     this.contactService.loadContacts(filterBy)
+  }
+
+  
+
+getContacts(){
+  this.contactService.contacts$
+  .subscribe(contacts=>{this.contacts=contacts})
+}
+  ngOnInit(): void {
+    this.loadContacts(null)
+    this.getContacts()
   }
 
 }

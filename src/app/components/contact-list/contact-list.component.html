@@ -1,1 +1,6 @@
-<contact-preview *ngFor="let contact of contacts" [contact]="contact"></contact-preview>
+<a *ngFor="let contact of contacts" [contact]="contact" [routerLink]="['/contact/'+contact._id]" 
+    class="contact-list">
+
+    <contact-preview [contact]="contact">
+    </contact-preview>
+</a>

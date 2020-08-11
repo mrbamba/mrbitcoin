@@ -3,6 +3,20 @@
 
 // BASE
 @import 'styles/basics/base';
+@import 'styles/basics/helpers';
+@import 'styles/basics/app-component';
+
+// PAGES
+@import 'styles/pages/contact-page';
+@import 'styles/pages/contact-edit';
+@import 'styles/pages/contact-details';
+@import 'styles/pages/home-page';
 
 // COMPONENTS
 @import 'styles/cmps/app-header';
+@import 'styles/cmps/contact-preview';
+@import 'styles/cmps/contact-filter';
+@import 'styles/cmps/contact-list';
+@import 'styles/cmps/transfer-funds';
+@import 'styles/cmps/move-preview';
+@import 'styles/cmps/move-list';

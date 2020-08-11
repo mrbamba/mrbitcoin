@@ -1,3 +1,9 @@
-<h2>Contacts</h2>
-<contact-filter (filter)="loadContacts($event)"></contact-filter>
-<contact-list *ngIf="contacts" [contacts]="contacts.source.value"></contact-list>
+<main class="contact-page">
+<div class="container">
+
+    <h2>Contacts</h2>
+    <a class="add-contact-link" routerLink="/contact/edit">+ Add Contact</a>
+    <contact-filter (filter)="loadContacts($event)"></contact-filter>
+    <contact-list *ngIf="contacts" [contacts]="contacts"></contact-list>
+</div>
+</main>

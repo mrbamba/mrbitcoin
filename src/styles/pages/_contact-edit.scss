@@ -1,0 +1,41 @@
+.contact-edit {
+    text-align: center;
+    button{
+        outline: none;
+    }
+
+    img {
+        margin: 10px auto 25px auto;
+    }
+
+    div {
+        margin: 0 auto;
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px auto;
+        flex-wrap: wrap;
+
+        h6 {
+            margin: 12px auto;
+            font-size: 14px;
+        }
+
+        input {
+            width: 300px;
+            padding: 8px 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        &:last-of-type {
+            margin-top: 50px;
+        }
+    }
+
+
+    .danger {
+        color: red;
+    }
+}

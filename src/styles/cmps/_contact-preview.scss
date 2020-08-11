@@ -1,0 +1,27 @@
+.contact-preview{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    line-height: .4;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    color: #fff;
+    transition: ease-in-out .2s;
+    &:hover{
+        background-color: rgb(199, 214, 250);
+        color: black;
+    }
+    h3{
+        color: inherit;
+        &:hover{
+            color: inherit;
+        }
+    }
+}
+
+    img{
+        margin-right: 15px;
+    }
