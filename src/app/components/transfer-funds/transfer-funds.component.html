@@ -1,8 +1,0 @@
-<section class="transfer-funds">
-<h3>Transfer funds to {{contact.name}}</h3>
-<form>
-    <label for="amount">Amount:</label>
-    <input type="number" name="amount" [(ngModel)]="transferAmount" max="user.coins">
-    <button class="general-button" (click)="performTransfer($event)">Transfer</button>
-</form>
-</section> 
